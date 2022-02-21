@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/*
+    CSS HEX 
+--dark-purple: #320a28ff;
+--tyrian-purple: #511730ff;
+--linen: #f3e9dcff;
+--pine-green: #0b7a75ff;
+--gunmetal: #012a36ff;
+
+*/
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body{
+    overflow: hidden;
+    cursor: default; /*não muda a forma do cursor do mouse*/
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+section{
+    background-color: #F3E9DC;
+    height: 100vh;
+}
+
+#tudo{
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.seção{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #F3E9DC;
+    position: relative;
+    scroll-snap-align: start;
+    height: 100vh; /*vh = viewpoint height*/
+    width: 100vw;
+}
+
+.conteudo{
+    display: inline-block;
+    text-align: left;
+}
+
+.titulo{/*
+    position: absolute;
+    top: 10%;
+    left: 15%;*/
+    margin: 5vh;
+    color: #320A28;
+    font-family: 'Ubuntu';
+    font-size: 9vh;
+    font-weight: 600;
+    z-index: 3;
+}
+
+@keyframes aparecer{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes aparecer2{
+    from{opacity: 0;}
+    to {opacity: 0.5;}
+}
+
+#primeiradiv{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    font-size: 1.7rem;
+}
+
+#titulo{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 1;
+    font-family: 'Lobster', cursive;
+    font-size: 8vmax;
+    text-align: center;
+    color: #320A28;
+}
+
+#hello, #good{
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+
+#good{
+    animation-delay: 2s;
+}
+
+#scroll{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 1.5vmax;
+    color:#FF5DA2;
+    margin: 1vmax;
+    
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+
+#c1,#c2,#c3,#c4,#c5,#c6,#c7{
+    border-radius: 50%;
+    position:absolute;
+    animation-name: aparecer2;
+    animation-duration: 12s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+#c1{
+    background-color: #FF5DA2;
+    min-height: 25vh;
+    min-width: 25vh;
+    opacity: 0.5;
+    left: 30%;
+    bottom: 65%;;
+}
+
+#c2{
+    background-color: #99DDCC;
+    min-height: 20vh;
+    min-width: 20vh;
+    opacity: 0.5;
+    left: 60%;
+    bottom: 40%
+}
+
+#c3{
+    background-color: #FFE162;
+    min-height: 20vh;
+    min-width: 20vh;
+    opacity: 0.5;
+    left: 40%;
+    bottom: 25%;
+}
+
+#c4{
+    background-color: #FF6464;
+    min-height: 30vh;
+    min-width: 30vh;
+    opacity: 0.5;
+    left:30%;
+    bottom: 10%;
+}
+
+#c5{
+    background-color: #8843F2;
+    min-height: 17vh;
+    min-width: 17vh;
+    opacity: 0.5;
+    left: 55%;
+    bottom: 70%;
+}
+
+#c6{
+    background-color: #3E00FF;
+    min-height: 10vh;
+    min-width: 10vh;
+    opacity: 0.5;
+    left: 30%;
+    bottom: 45%;
+}
+
+#c7{
+    background-color: #08D9D6;
+    min-height: 6vh;
+    min-width: 6vh;
+    opacity: 0.5;
+    left: 55%;
+    bottom: 70%;
+}
+
+#segundadivisao p{
+    margin: 5vh;
+    line-height: 4vh;
+    max-width: 45ch;
+    color: #320A28;
+    font-family: 'Ubuntu';
+    font-size: 2.5vh;
+    font-weight: 600;
+    left: 15%;
+    top: 35%;
+}
+
+#bolha1{
+    z-index: 1;
+    opacity: 0.5;
+    position: absolute;
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40% ;
+    background-color: #8843F2;
+    min-width: 80vh;
+    min-height: 80vh;
+    left: 60%;
+    top: 15%;
+    rotate: 5deg;
+}
+
+#bolha2{
+    z-index: 2;
+    opacity: 0.5;
+    position: absolute;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    background-color: #08D9D6;
+    min-width: 30vh;
+    min-height: 30vh;
+    left: 65%;
+    top: 15%;
+}
+
+#bolha3{
+    z-index: 1;
+    opacity: 0.5;
+    position: absolute;
+    border-radius: 43% 57% 65% 35% / 60% 64% 36% 40% ;
+    background-color: #3E00FF;
+    min-width: 90vh;
+    min-height: 90vh;
+    right: 70%;
+    top: 15%;
+}
+
+#bolha4{
+    z-index: 1;
+    opacity: 0.5;
+    position: absolute;
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40% ;
+    background-color: #FF5DA2;
+    min-width: 35vh;
+    min-height: 35vh;
+    right: 8%;
+    top: 45%;
+}
+
+#bolha5{
+    z-index: 1;
+    opacity: 0.5;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #FFE162;
+    min-width: 10vh;
+    min-height: 10vh;
+    right: 35%;
+    top: 60%;
+}
+
+#terceiradivisao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#conjuntoblocos{
+    max-width: 56vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bloco{
+    max-width: 30vw;
+    z-index: 2;
+    font-family: 'Ubuntu';
+    color: #320A28;
+    background-color: #f3e9dcd7;
+    border: 4px #08D9D6 solid;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin: 1vw;
+}
+
+#blocojava{
+    min-height: 45vh;
+}
+
+#blococultura{
+    min-height: 15vh;
+}
+
+h2{
+    font-size: 4vh;
+    margin-left: 2rem;
+}
+
+.toggle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+    margin: 5px;
+}
+
+#ptoggle{
+    margin: 1em;
+    font-size: 2vh;
+}
+
+img{
+    box-shadow: 0rem 0.7rem 1rem #320A28;
+    max-width: 18vw;
+    transition: .2s ease;
+    border-radius: 1rem;
+}
+
+img:hover{
+    transform: scale(2);
+    margin-bottom: 3rem;
+}
+
+#quartadivisao ul{
+    height: 40ch;
+    flex-direction: column;
+    top: 45%;
+    left: 61%;
+}
+
+li::marker{
+    color: #FF5DA2;
+}
+
+#quartadivisao li{
+    margin: 1.5rem;
+    font-weight: 600;
+    font-size: 3rem;
+    color: #320A28;
+    font-family: 'Ubuntu';
+}
